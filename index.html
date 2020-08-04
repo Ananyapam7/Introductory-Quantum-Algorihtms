@@ -482,7 +482,9 @@ pre[class*="language-"] {
 
 <p>Think of an electron. Remember that the energy states of the electron are quantized and can only take on discrete values. Now, if we wish to represent a &#39;bit&#39; of information, we can restrict the energy of the system to be between the ground state and the first excited state. This way, the electron can only be at either of the two states denoted by \(|0\rangle\) or \(|1\rangle\).</p>
 
-<p><img src="images/electron.png" alt=""></p>
+<p><center>
+<img src="images/electron.png" alt="">
+</center></p>
 
 <p>But the specialty of quantum particles like electrons is that it does NOT decide beforehand where it wants to be, which is why we say that is in a superposition of the states \(|0\rangle\) and \(|1\rangle\).</p>
 
@@ -493,7 +495,7 @@ pre[class*="language-"] {
 <p>But what does an amplitude mean? The physical interpretation of this can be explained by the Born rule, which says that the probability of each of the quantum states is given by the square of its complex amplitude. To find the probability, we multipy on the left by the corresponding bra vector and note that these states are orthogonal and normalized meaning \(\langle0|1\rangle=0=\langle1|0\rangle\) and \(\langle0|0\rangle=1=\langle1|1\rangle\). The reason for this will become clear in a second, just bear with me for a second..
 \[P[\text{finding the electron in state }|0\rangle] = |\alpha\langle0|0\rangle + \beta \langle0|1\rangle|^2 = |\alpha|^2\]
 \[P[\text{finding the electron in state }|1\rangle] = |\alpha\langle1|0\rangle + \beta \langle1|1\rangle|^2 = |\beta|^2\]
-Because we have restricted the energy of the electron to be at one of the states \(|0\rangle\) or \(|1\rangle\) and \since probabilities always add up to 1, we can say that</p>
+Because we have restricted the energy of the electron to be at one of the states \(|0\rangle\) or \(|1\rangle\) and since probabilities always add up to 1, we can say that</p>
 
 <p>\[|\alpha|^2 + |\beta|^2 = 1 \]
 This is called normalization, which captures the probabilistic thinking in QM which was the reason we took the states to be orthogonal meaning \(\langle0|1\rangle=0=\langle1|0\rangle\) and normalised \(\langle0|0\rangle=1=\langle1|1\rangle\) earlier</p>
@@ -504,7 +506,7 @@ This is called normalization, which captures the probabilistic thinking in QM wh
 
 <h2 id="toc_3">Representation</h2>
 
-<p>Now let us try to visualize and represent these states more concretely. \since there are two complex amplitutes, we can represent them as a column vector with 2 entries 
+<p>Now let us try to visualize and represent these states more concretely. since there are two complex amplitutes, we can represent them as a column vector with 2 entries 
 \[\alpha |0\rangle +\beta |1\rangle =  \begin{pmatrix} \alpha\\ \beta \\ \end{pmatrix}\]
 In this representation, we notice that we can express our abstract labelled kets \(|0\rangle\) and \(|1\rangle\) in a mathematical way. We see that - \[|0\rangle = \begin{pmatrix} 1 \\ 0 \\ \end{pmatrix} \text{ when } \ \alpha=1 \ \text{ and } \  \beta = 0\] and \[|1\rangle = \begin{pmatrix} 0 \\ 1 \\ \end{pmatrix} \text{ when } \ \alpha=0 \ \text{ and } \  \beta = 1\]
 Notice that this representation tells us a few things about these two states. </p>
@@ -526,7 +528,7 @@ which makes an angle of \(\theta\) with the \(|0\rangle\) state. Let us make a l
 
 <p>Note that measurement of a system can be done in an arbitary basis and our results depend on the basis along which we perform our measurement. In the above case the measurement was done on the \(|0\rangle\) and \(|1\rangle\) basis. Now let us chose another basis \({\{|+\rangle, |-\rangle}\}\) as \[|+\rangle = \frac{1}{\sqrt 2}(|0\rangle+|1\rangle)\] and
 \[|-\rangle = \frac{1}{\sqrt 2}(|0\rangle-|1\rangle)\]
-You can quickly verify that this does corresponds to a basis, \since it is linearly independent, and spans the vector space. As a bonus we also find that this basis is also orthogonal \since the inner product corresponds to 0. Now to measure the state of the system in the \({\{|+\rangle, |-\rangle}\}\) basis, we take the inner product of the state with the basis states\[\langle+|\psi\rangle = \frac{1}{\sqrt 2}(\langle0|+\langle1|)(\cos\theta|0\rangle + \sin\theta|1\rangle)\]
+You can quickly verify that this does corresponds to a basis, since it is linearly independent, and spans the vector space. As a bonus we also find that this basis is also orthogonal since the inner product corresponds to 0. Now to measure the state of the system in the \({\{|+\rangle, |-\rangle}\}\) basis, we take the inner product of the state with the basis states\[\langle+|\psi\rangle = \frac{1}{\sqrt 2}(\langle0|+\langle1|)(\cos\theta|0\rangle + \sin\theta|1\rangle)\]
 \[= \frac{1}{\sqrt 2}(\cos \theta\langle0|0\rangle+\sin\theta\langle1|1\rangle)\]
 \[=\frac{1}{\sqrt 2}(\cos \theta+\sin\theta)\]
 Which gives the probability of finding the state \(|\psi\rangle\) in the \(|+\rangle\) state as
@@ -540,7 +542,7 @@ Hence, the probability of finding the state \(|\psi\rangle\) in the \(|-\rangle\
 As expected, the probabilities add up to 1 which we can see as \[|\langle+|\psi\rangle|^2 +|\langle-|\psi\rangle|^2 = \frac{1}{2}(\cos\theta + \sin\theta)^2+\frac{1}{2}(\cos\theta - \sin\theta)^2=1\]
 But note in interesting fact here. Let us see what happens as \(\theta\) tends to 0. As \(\theta\) gradually tends to 0, \(\sin\theta\) tends to 0 and \(\cos\theta\) tends to 1 and we can deterministically claim that the qubit is in state \(|0\rangle\) when measured in the \({\{|0\rangle, |1\rangle}\}\) bais. However in the \({\{|+\rangle, |-\rangle}\}\) basis, the qubit is in the \(|+\rangle\) state with a probability of \(\frac {1}{2}\) and in the \(|-\rangle\) state with a probability of \(\frac {1}{2}\) which is the case of maximum uncertainity.</p>
 
-<p>This is essentially the Heisenberg&#39;s Uncertainty principle which says that the more we know about a system in one basis the less we know about the system in another basis. (You may remember this principle as relating the uncertainties of position and momentum which is a special case, \since each of them form a valid basis for the vector space.)</p>
+<p>This is essentially the Heisenberg&#39;s Uncertainty principle which says that the more we know about a system in one basis the less we know about the system in another basis. (You may remember this principle as relating the uncertainties of position and momentum which is a special case, since each of them form a valid basis for the vector space.)</p>
 
 <h2 id="toc_5">Bloch Sphere</h2>
 
@@ -557,15 +559,17 @@ So the vector \(|0\rangle\) can be written as \(\begin{pmatrix} 0\\ 0 \\ 1 \end{
 as we discussed in the previous section. It is none! Both of these are just representations of the abstract state that we did to understand it better.<br>
 Another crucial thing to note is that antipodal vectors form basis states of the system in the Bloch sphere while in the actual vector space, they are orthogonal and have an angle of \(\pi/2\). For example, the \({\{|+\rangle, |-\rangle}\}\) basis, \({\{|0\rangle, |1\rangle}\}\) basis or the \({\{|+i\rangle=\frac{1}{\sqrt2}(|0\rangle+i|1\rangle), |-i\rangle=\frac{1}{\sqrt2}(|0\rangle-i|1\rangle)}\}\) basis (which are along the z, x, and y axes respectively).</p>
 
-<p><img src="images/sphere.png" alt=""></p>
+<p><center>
+<img src="images/sphere.png" alt="">
+</center></p>
 
 <h2 id="toc_6">Quantum Gates and Getting started with Qiskit</h2>
 
-<p>I believe now we are ready to understand what quantum gates are and their significance. \since we know that measuring the qubit will collapse the system and we will lose the initially prepared state, we can try to manipulate that initial state of the qubit by pas\sing it through different quantum gates in a quantum circuit without explicitly measuring it. This represents the transfer of quantum information. Notice here the analogy with classical bit manipulation in digital logic.</p>
+<p>I believe now we are ready to understand what quantum gates are and their significance. Since we know that measuring the qubit will collapse the system and we will lose the initially prepared state, we can try to manipulate that initial state of the qubit by passing it through different quantum gates in a quantum circuit without explicitly measuring it. This represents the transfer of quantum information. Notice here the analogy with classical bit manipulation in digital logic.</p>
 
-<p>These gates have many interpretations. Mathematically they can be thought of as unitary operators that act on states (\since the states are normalized, the operations of these states must be unitary). Visually, these gates correspond to movements of vectors along the Bloch sphere. </p>
+<p>These gates have many interpretations. Mathematically they can be thought of as unitary operators that act on states (since the states are normalized, the operations of these states must be unitary). Visually, these gates correspond to movements of vectors along the Bloch sphere. </p>
 
-<p>Let us now get started with coding them hands-on with qiskit which  is open-source SDK. With Qiskit, you can run your quantum programs and algorithms sitting at your home and without physically acces\sing any laboratory with a large quantum computer. You simulate your your quantum programs locally or even send them to IBM&#39;s quantum computers, and the&#39;ll return the result to you! </p>
+<p>Let us now get started with coding them hands-on with qiskit which  is open-source SDK. With Qiskit, you can run your quantum programs and algorithms sitting at your home and without physically accessing any laboratory with a large quantum computer. You simulate your your quantum programs locally or even send them to IBM&#39;s quantum computers, and the&#39;ll return the result to you! </p>
 
 <p>To install qiskit simply open the terminal and run
 <code>pip install qiskit</code>
@@ -647,7 +651,7 @@ plot_histogram(result.get_counts(circuit))</code></pre></div>
 
 <p><img src="images/plot_1.png" alt=""></p>
 
-<p>This plot may not make any sense at first, but keep in mind that the qasm simulator returns the counts on the classical register. \since we have not done any measurement on the circuit, it just gives us all counts on the default value of the classical register, which is 0.</p>
+<p>This plot may not make any sense at first, but keep in mind that the qasm simulator returns the counts on the classical register. Since we have not done any measurement on the circuit, it just gives us all counts on the default value of the classical register, which is 0.</p>
 
 <p>However, if we measure the circuit before reading the counts, we see a much more familiar output. To measure, we use the measure() function and pass the quantum bits as the first argument and the classical bits into which we want the measurement as the second argument.</p>
 
@@ -665,19 +669,19 @@ plot_histogram(result.get_counts(circuit))</code></pre></div>
 
 <p><img src="images/pic.png" alt=""></p>
 
-<p>Notice the difference between the above two circuits. After we perform the measurement in the second circuit, it collapses the qubit into one of the two classical bits. \since the Hadamard gate takes the input state of \(|0\rangle\) and puts it into an equal superposition of both the states, we see that the probability is roughly 50% for superposition collap\sing into each of it&#39;s basis states. Also, \since we have used the qasm simulator, which mimics a real noisy quantum computer, the probability is not precisely 50%. Let&#39;s see some more gates</p>
+<p>Notice the difference between the above two circuits. After we perform the measurement in the second circuit, it collapses the qubit into one of the two classical bits. Since the Hadamard gate takes the input state of \(|0\rangle\) and puts it into an equal superposition of both the states, we see that the probability is roughly 50% for superposition collapsing into each of it&#39;s basis states. Also, since we have used the qasm simulator, which mimics a real noisy quantum computer, the probability is not precisely 50%. Let&#39;s see some more gates</p>
 
 <h3 id="toc_9">Pauli -X Gate</h3>
 
 <p>This gate is represented by the matrix \[X = \begin{pmatrix} 0 &amp; 1\\ 1 &amp; 0 \\ \end{pmatrix}\]
-This gate when operated on a \single qubit acts as follows 
+This gate when operated on a single qubit acts as follows 
 \[X|0\rangle = \begin{pmatrix} 0 &amp; 1\\ 1 &amp; 0 \\ \end{pmatrix}.\begin{pmatrix} 1 \\ 0  \\ \end{pmatrix}= \begin{pmatrix} 0 \\ 1  \\ \end{pmatrix} = |1\rangle\]
 \[X|1\rangle = \begin{pmatrix} 0 &amp; 1\\ 1 &amp; 0 \\ \end{pmatrix}.\begin{pmatrix} 0 \\ 1  \\ \end{pmatrix}= \begin{pmatrix} 1 \\ 0  \\ \end{pmatrix} = |0\rangle\]
 \[X|+\rangle = |+\rangle\]
 \[X|-\rangle = |-\rangle\]
 On the Bloch sphere, it corresponds to a rotation of \(\pi\) around the x-axis. Notice that the \(|0\rangle\) changes to \(|1\rangle\) and the \(|1\rangle\) changes to \(|0\rangle\). This gate is hence called the bit-flip and is analogous to the classical NOT gate.</p>
 
-<p>Let us make a circuit u\sing this</p>
+<p>Let us make a circuit using this</p>
 
 <div><pre><code class="language-python">circuit = QuantumCircuit(1,1)
 circuit.x(0)
@@ -686,7 +690,7 @@ circuit.draw(&#39;mpl&#39;)</code></pre></div>
 
 <p><img src="images/x_had_1.png" alt=""></p>
 
-<p>This time, we&#39;ll look at a different simulator to run this called the state vector simulator. This simulator returns the quantum state, a complex vector of dimensions \(2^n\) where \(n\) is the number of qubits used. So be careful u\sing this as it will quickly get too large to run on your machine.</p>
+<p>This time, we&#39;ll look at a different simulator to run this called the state vector simulator. This simulator returns the quantum state, a complex vector of dimensions \(2^n\) where \(n\) is the number of qubits used. So be careful using this as it will quickly get too large to run on your machine.</p>
 
 <p>Since the statevector only returns the quantum state and measuring the quantum state will collapse the system into it&#39;s basis states. Let us illustrate this by executing the above code.</p>
 
@@ -726,8 +730,9 @@ outputstate = result.get_statevector(circuit, decimals=4)
 from qiskit.visualization import plot_state_city
 plot_state_city(outputstate)</code></pre></div>
 
-<p><img src="images/x_had_measure_state_city_plot.png" alt="">
-Voila! Our quantum state collapsed again after the measurement! Just what we&#39;d expect. Another interesting thing is if we do this experiment again, we might collapse the system into a different state which would give us a different plot. If we do this experiment a large number of times and note the number of times our system collapses into each of our states, we&#39;d find the proportion to agree with the square of the coefficients of basis states of the initial state of the system.</p>
+<p><img src="images/x_had_measure_state_city_plot.png" alt=""></p>
+
+<p>Voila! Our quantum state collapsed again after the measurement! Just what we&#39;d expect. Another interesting thing is if we do this experiment again, we might collapse the system into a different state which would give us a different plot. If we do this experiment a large number of times and note the number of times our system collapses into each of our states, we&#39;d find the proportion to agree with the square of the coefficients of basis states of the initial state of the system.</p>
 
 <p>This was an introduction to quantum computing and hopefully by now you understand the power of qiskit in simulating quantum effects in circuits. Next we&#39;ll discuss a entanglement a few more gates and some quantum algorithms.</p>
 
