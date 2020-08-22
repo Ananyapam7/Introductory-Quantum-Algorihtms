@@ -6,9 +6,9 @@ Qiskit is made up of elements that work together to enable quantum computing. Th
 ## Installation of qiskit
 The best way to install qiskit is by using the python package manager pip
 
-'''python
+```python
 pip install qiskit
-'''
+```
 
 Qiskit is made up of 4 elements Terra, Aer, Ignis and Aqua. If you want to run your program on real systems, you need a 5th element IBM Q Provider.
 
