@@ -14,6 +14,10 @@ Qiskit is made up of 4 elements Terra, Aer, Ignis and Aqua. If you want to run y
 
 Follow the tutorial here : [Introducing Qiskit and Quantum Computing Fundamentals](https://ananyapam7.github.io/An-Introduction-to-Quantum-Computing-by-Qiskit/) 
 
+## Grover Search Algorithm
+This is a quantum searching algorithm which improves our speed quadratically! Find the Notebook explaining the [Grover Search Algorithm here!](https://github.com/Ananyapam7/Introductory-Quantum-Algorihtms/blob/master/notebooks/Grover.ipynb)
+
+
 Other References:
 Check out the [textbook](https://qiskit.org/textbook/preface.html) 
 And some youtube [videos](https://www.youtube.com/playlist?list=PLOFEBzvs-Vvp2xg9-POLJhQwtVktlYGbY) to learn more. 
