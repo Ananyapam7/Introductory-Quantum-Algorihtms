@@ -12,7 +12,7 @@ pip install qiskit
 
 Qiskit is made up of 4 elements Terra, Aer, Ignis and Aqua. If you want to run your program on real systems, you need a 5th element IBM Q Provider.
 
-Follow the tutorial here : [Introducing Qiskit and Basic Quantum Algorithms](https://ananyapam7.github.io/An-Introduction-to-Quantum-Computing-by-Qiskit/) 
+Follow the tutorial here : [Introducing Qiskit and Quantum Computing Fundamentals](https://ananyapam7.github.io/An-Introduction-to-Quantum-Computing-by-Qiskit/) 
 
 Other References:
 Check out the [textbook](https://qiskit.org/textbook/preface.html) 
